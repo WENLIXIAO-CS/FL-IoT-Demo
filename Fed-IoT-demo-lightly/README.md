@@ -64,3 +64,11 @@ python FL_ClientMain.py -ip 192.168.43.156`
     3.1.   `sh run.sh`
 
 4. Launch app `MySocket` on Android phone one by one
+
+
+
+## Server prerequirement
+```
+pytorch 1.4
+matplotlib
+```

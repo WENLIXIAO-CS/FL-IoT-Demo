@@ -17,7 +17,7 @@
 #     # ssh-copy-id nano@${HOSTNAME}
 
 #     # Remove Old version Code
-#     # ssh -o StrictHostKeyChecking=no -l ${USERNAME} ${HOSTNAME} "rm -rf /home/nano/fed-iot/fed-iot-demo-lightly
+#     # ssh -o StrictHostKeyChecking=no -l ${USERNAME} ${HOSTNAME} "rm -rf /home/nano/fed-iot-demo-lightly/Fed-IoT-demo-lightly
     
 #     # Upload New version Code 
 #     rsync -r -avu -e ssh --stats --exclude=.git --exclude=data/synthetic/ --exclude=log/* --exclude=cache/* "${DIR}" nano@${HOSTNAME}:/home/nano/fed-iot-demo-lightly
@@ -48,7 +48,7 @@ for HOSTNAME in ${HOSTS} ; do
     # ssh-copy-id pi@${HOSTNAME}
 
     # remove old version code 
-    ssh -o StrictHostKeyChecking=no -l ${USERNAME} ${HOSTNAME} "rm -rf /home/nano/fed-iot/fed-iot-demo-lightly"
+    ssh -o StrictHostKeyChecking=no -l ${USERNAME} ${HOSTNAME} "rm -rf /home/pi/fed-iot-demo-lightly/Fed-IoT-demo-lightly"
 
     # Upload new code 
     rsync -r -avu -e ssh --stats --exclude=.git --exclude=data/synthetic --exclude=log/* --exclude=cache/* "${DIR}" pi@${HOSTNAME}:/home/pi/fed-iot-demo-lightly

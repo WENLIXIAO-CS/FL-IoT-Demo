@@ -25,7 +25,7 @@ fs = 0
 # Screen1 = FirstScreen()
 
 # Set number of phones to connect
-numOfPhone = 0
+numOfPhone = 3
 
 # Ignore
 numOfConnect = None
@@ -33,9 +33,9 @@ numOfConnect = None
 def FL_server_pre_process(num_of_client, num_of_client_connect, ti, d_f):
     global t_img, t_lab, numOfConnect
     # create model and network
-    new_model = load_model("models/standard_model.pkl") 
+    # new_model = load_model("models/standard_model.pkl") 
     new_model = Model()
-    # save_model(new_model, "models/standard_model_RS.pkl")
+    save_model(new_model, "models/standard_model_RS.pkl")
     # init clients with data 
     client_set, t_img, t_lab = p2_init_client_with_data(num_of_client, ti, d_f)
     # show data distribution
@@ -241,7 +241,7 @@ if __name__ == "__main__":
         d_f= 0.6, # data fraction
         num_of_client= 10,   
         # set number of devices to connect
-        num_of_client_connect= 2,
+        num_of_client_connect= 3,
         num_of_round= 4000000,
         download_dis_info=(0,0.5),
         compute_dis_info=(0,0.5), # (mean, sig)
