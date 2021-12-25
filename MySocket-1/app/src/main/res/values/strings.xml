@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fed-Android-Lightly</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="newviewText">Waiting for message...</string>
+    <string name="TextView2">Send:</string>
+    <string name="Status">None</string>
+</resources>
