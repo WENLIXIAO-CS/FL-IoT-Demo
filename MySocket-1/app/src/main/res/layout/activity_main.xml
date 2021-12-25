@@ -36,8 +36,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/green_block"
         app:layout_constraintEnd_toEndOf="@+id/green_block"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@+id/green_block"
-        app:layout_constraintTop_toTopOf="@+id/green_block" />
+        app:layout_constraintTop_toTopOf="@+id/green_block"
+        app:layout_constraintVertical_bias="0.501" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -54,7 +56,7 @@
         android:layout_width="134dp"
         android:layout_height="77dp"
         android:gravity="center"
-        android:text="3.825"
+        android:text="NA"
         android:textColor="#000000"
         android:textSize="50sp"
         android:textStyle="bold"

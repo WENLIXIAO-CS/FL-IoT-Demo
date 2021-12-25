@@ -116,7 +116,8 @@ def train(train_model, train_raw_img, train_raw_lab, E, bt_size=100, epochs=1, l
     return np.sum(tms)
 
 def save_model(model,path):
-    torch.save(model, path, _use_new_zipfile_serialization=False)
+    # torch.save(model, path, _use_new_zipfile_serialization=False)
+    torch.save(model, path)
     
 def load_model(model_name):
     model = torch.load(model_name)

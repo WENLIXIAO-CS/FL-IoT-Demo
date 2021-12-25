@@ -24,15 +24,18 @@ fs = 0
 # from plotO import FirstScreen
 # Screen1 = FirstScreen()
 
-numOfPhone = 1
-numOfConnect = 0
+# Set number of phones to connect
+numOfPhone = 0
+
+# Ignore
+numOfConnect = None
 
 def FL_server_pre_process(num_of_client, num_of_client_connect, ti, d_f):
     global t_img, t_lab, numOfConnect
     # create model and network
-    # new_model = load_model("models/standard_model.pkl") 
+    new_model = load_model("models/standard_model.pkl") 
     new_model = Model()
-    save_model(new_model, "models/standard_model_RS.pkl")
+    # save_model(new_model, "models/standard_model_RS.pkl")
     # init clients with data 
     client_set, t_img, t_lab = p2_init_client_with_data(num_of_client, ti, d_f)
     # show data distribution
@@ -237,6 +240,7 @@ if __name__ == "__main__":
         ti= 2, # non-iid type 1,2,4,8
         d_f= 0.6, # data fraction
         num_of_client= 10,   
+        # set number of devices to connect
         num_of_client_connect= 2,
         num_of_round= 4000000,
         download_dis_info=(0,0.5),

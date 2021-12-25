@@ -73,7 +73,7 @@ def TS_process_every_round(num_of_round, socketClient, E, bt_size, epoch, l_rate
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--ip', help='ip address of server')
+    parser.add_argument('--ip','-ip', help='ip address of server')
     args = parser.parse_args()
 
     socketClient = FL_client_pre_process(args.ip)
